@@ -18,11 +18,9 @@ import django.contrib.auth.urls
 from django.urls import path, include
 from django.views.generic import RedirectView
 
-import users.urls
-
 urlpatterns = [
     path('', RedirectView.as_view(url='users/', permanent=True)),
-    path('users/', include(users.urls)),
+    path('users/', include('users.urls')),
     path('admin/', admin.site.urls),
     path('account/', include(django.contrib.auth.urls))
 ]

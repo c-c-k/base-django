@@ -5,7 +5,10 @@
   <title>register</title>
 </head>
 <body>
-  <a href="{% url 'users:register' %}">register</a>
-
+  <form action="{% url 'users:register' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+  </form>
 </body>
 </html>
