@@ -8,13 +8,13 @@ from .forms import ExtendedUserCreationForm
 
 class UserMenuView(View):
     def get(self, request):
-        return render(request, 'users/user_menu.html')
+        return render(request, 'default/user_menu.html')
 
 
 class RegisterView(CreateView):
     form_class = ExtendedUserCreationForm
     success_url = reverse_lazy('default:user_menu')
-    template_name = 'users/register.html'
+    template_name = 'default/register.html'
 
 # class RegisterView(View)
 #     form = UserCreationFormWithPersonalInfo
