@@ -1,14 +1,14 @@
 {% extends 'dummy_base.html' %}
 {% block title %}
-  {% if False %}
-    ?'s user menu
+  {% if user.is_authenticated %}
+    {{ user.username }}'s user menu
   {% else %}
     Default user manager dummy wellcome page
   {% endif %}
 {% endblock %}
 {% block content %}
-  {% if False %}
-    <h1>Hello ?</h1>
+  {% if user.is_authenticated %}
+    <h1>Hello {{ user.first_name }} {{ user.last_name }}</h1>
     <p><a href="{% url 'default:password_change' %}">Change password</a> </p>
     <p><a href="{% url 'default:logout' %}">Logout</a> </p>
   {% else %}
