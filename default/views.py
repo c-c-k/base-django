@@ -21,13 +21,13 @@ class RegisterView(CreateView):
 #
 #     def get(self, request):
 #         context = {'form': self.form}
-#         return render(request, 'users/register.html', context=context)
+#         return render(request, 'default/register.html', context=context)
 #
 #     def post(self, request):
 #         form = self.form(request)
 #         if form.is_valid():
 #             form.save()
-#             return redirect(reverse('users:index'))
+#             return redirect(reverse('default:index'))
 #         else:
 #             context= {'form': form.cleaned_data}
-#             return render(request, 'users/register.html', context=context)
+#             return render(request, 'default/register.html', context=context)
