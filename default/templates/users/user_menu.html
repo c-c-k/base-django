@@ -1,0 +1,19 @@
+{% extends 'dummy_base.html' %}
+{% block title %}
+  {% if False %}
+    ?'s user menu
+  {% else %}
+    Default user manager dummy wellcome page
+  {% endif %}
+{% endblock %}
+{% block content %}
+  {% if False %}
+    <h1>Hello ?</h1>
+    <p><a href="{% url 'default:password_change' %}">Change password</a> </p>
+    <p><a href="{% url 'default:logout' %}">Logout</a> </p>
+  {% else %}
+    <p>Welcome to the default user manager.</p>
+    <p><a href="{% url 'default:login' %}">Login</a> </p>
+    <p><a href="{% url 'default:register' %}">Register</a> </p>
+  {% endif %}
+{% endblock %}

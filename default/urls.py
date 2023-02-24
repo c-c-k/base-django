@@ -6,7 +6,8 @@ from . import views
 
 app_name = 'default'
 urlpatterns = [
+    path('user_menu/', views.UserMenuView.as_view(), name='user_menu'),
     path('register/', views.RegisterView.as_view(), name='register'),
     path('', include(django.contrib.auth.urls)),
-    path('', RedirectView.as_view(url=reverse_lazy('default:login'))),
+    path('', RedirectView.as_view(url=reverse_lazy('default:user_menu'))),
 ]

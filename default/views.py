@@ -6,14 +6,14 @@ from django.views.generic import CreateView
 from .forms import ExtendedUserCreationForm
 
 
-class IndexView(View):
+class UserMenuView(View):
     def get(self, request):
-        return render(request, 'users/index.html')
+        return render(request, 'users/user_menu.html')
 
 
 class RegisterView(CreateView):
     form_class = ExtendedUserCreationForm
-    success_url = reverse_lazy('users:index')
+    success_url = reverse_lazy('default:user_menu')
     template_name = 'users/register.html'
 
 # class RegisterView(View)
