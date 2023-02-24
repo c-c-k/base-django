@@ -12,7 +12,12 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+# Uncomment if using AUTH_USER_MODEL setting.
+
+# import accounts.models
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -96,9 +101,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# User authentication
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-user-model
+# Authentication
+# https://docs.djangoproject.com/en/4.1/ref/settings/#auth
 
+# AUTH_USER_MODEL = accounts.models.User  # default: django..auth..User
 # LOGIN_REDIRECT_URL =  # default: 'accounts:profile'
 # LOGIN_URL =  # default: 'accounts:login'
 LOGOUT_REDIRECT_URL = 'accounts:logout'  # default: None
