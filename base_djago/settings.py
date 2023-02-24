@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'default.apps.UsersConfig',
+    'accounts.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -104,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # User Authentication
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-user-model
 
-LOGIN_URL = 'default:login'
-LOGIN_REDIRECT_URL = 'default:user_menu'
-LOGOUT_REDIRECT_URL = 'default:logout'
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'accounts:user_menu'
+LOGOUT_REDIRECT_URL = 'accounts:logout'
 
 
 # Internationalization

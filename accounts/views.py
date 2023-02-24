@@ -8,7 +8,7 @@ from .forms import ExtendedUserCreationForm
 
 class UserMenuView(View):
     def get(self, request):
-        return render(request, 'default/user_menu.html')
+        return render(request, 'default/profile.html')
 
 
 class RegisterView(CreateView):
@@ -21,13 +21,13 @@ class RegisterView(CreateView):
 #
 #     def get(self, request):
 #         context = {'form': self.form}
-#         return render(request, 'default/register.html', context=context)
+#         return render(request, 'accounts/register.html', context=context)
 #
 #     def post(self, request):
 #         form = self.form(request)
 #         if form.is_valid():
 #             form.save()
-#             return redirect(reverse('default:index'))
+#             return redirect(reverse('accounts:index'))
 #         else:
 #             context= {'form': form.cleaned_data}
-#             return render(request, 'default/register.html', context=context)
+#             return render(request, 'accounts/register.html', context=context)

@@ -4,7 +4,7 @@ from django.views.generic import RedirectView
 
 from . import views
 
-app_name = 'default'
+app_name = 'accounts'
 urlpatterns = [
     path('user_menu/', views.UserMenuView.as_view(), name='user_menu'),
     path('register/', views.RegisterView.as_view(), name='register'),
