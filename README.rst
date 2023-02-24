@@ -1,10 +1,8 @@
 ########################################
-Django basic user manager
+Base Django
 ########################################
 
 Description
 ========================================
 
-A minimal user management application based on the Django web framework.
-
-Mostly meant for practice.
+This repository is intended to be my template and reference repository for other projects.
