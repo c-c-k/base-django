@@ -1,3 +1,6 @@
+# https://docs.djangoproject.com/en/4.1/topics/auth/default/#module-django.contrib.auth.views
+
+from django.contrib.auth import views as auth_views
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views import View
@@ -22,3 +25,35 @@ class GenericRegisterView(CreateView):
     success_url = reverse_lazy('accounts:user_menu')
     template_name = 'registration/register.html'
 
+
+# class Generic$1(auth_views.$1):\n       pass\n\n\n
+class GenericLoginView(auth_views.LoginView):
+    pass
+
+
+class GenericLogoutView(auth_views.LogoutView):
+    pass
+
+
+class GenericPasswordChangeView(auth_views.PasswordChangeView):
+    pass
+
+
+class GenericPasswordChangeDoneView(auth_views.PasswordChangeDoneView):
+    pass
+
+
+class GenericPasswordResetView(auth_views.PasswordResetView):
+    pass
+
+
+class GenericPasswordResetDoneView(auth_views.PasswordResetDoneView):
+    pass
+
+
+class GenericPasswordResetConfirmView(auth_views.PasswordResetConfirmView):
+    pass
+
+
+class GenericPasswordResetCompleteView(auth_views.PasswordResetCompleteView):
+    pass

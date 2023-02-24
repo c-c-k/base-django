@@ -2,11 +2,11 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
 
-from ..forms import ExtendedUserCreationForm
+from ..forms import UserCreationForm
 
 
 class CustomRegisterView(View):
-    form = ExtendedUserCreationForm
+    form = UserCreationForm
 
     def get(self, request):
         context = {'form': self.form}
