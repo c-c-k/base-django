@@ -9,11 +9,11 @@
 {% block content %}
   {% if user.is_authenticated %}
     <h1>Hello {{ user.first_name }} {{ user.last_name }}</h1>
-    <p><a href="{% url 'default:password_change' %}">Change password</a> </p>
-    <p><a href="{% url 'default:logout' %}">Logout</a> </p>
+    <p><a href="{% url 'accounts:password_change' %}">Change password</a> </p>
+    <p><a href="{% url 'accounts:logout' %}">Logout</a> </p>
   {% else %}
     <p>Welcome to the default user manager.</p>
-    <p><a href="{% url 'default:login' %}">Login</a> </p>
-    <p><a href="{% url 'default:register' %}">Register</a> </p>
+    <p><a href="{% url 'accounts:login' %}">Login</a> </p>
+    <p><a href="{% url 'accounts:register' %}">Register</a> </p>
   {% endif %}
 {% endblock %}

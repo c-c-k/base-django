@@ -9,5 +9,5 @@ urlpatterns = [
     path('user_menu/', views.UserMenuView.as_view(), name='user_menu'),
     path('register/', views.RegisterView.as_view(), name='register'),
     path('', include(django.contrib.auth.urls)),
-    path('', RedirectView.as_view(url=reverse_lazy('default:user_menu'))),
+    path('', RedirectView.as_view(url=reverse_lazy('accounts:user_menu'))),
 ]
