@@ -24,3 +24,6 @@ class User(auth_models.AbstractUser):
     https://docs.djangoproject.com/en/4.1/topics/auth/customizing/#extending-the-existing-user-model
     """
     pass
+
+    class Meta(auth_models.AbstractUser.Meta):
+        swappable = "AUTH_USER_MODEL"

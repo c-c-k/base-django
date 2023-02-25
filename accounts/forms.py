@@ -1,6 +1,9 @@
 from django.contrib.auth import forms as auth_forms
+# :note: If using a custom User model, comment/remove the next line:
+from django.contrib.auth.models import User
 
-from .models import User
+# :note: If using a custom User model, uncomment the next line:
+# from .models import User
 
 
 class UserCreationForm(auth_forms.UserCreationForm):
