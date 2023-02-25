@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import CreateView
 
-from ..forms import ExtendedUserCreationForm
+from ..forms import UserCreationForm
 
 
 class GenericProfileView(View):
@@ -21,12 +21,11 @@ class GenericProfileView(View):
 
 
 class GenericRegisterView(CreateView):
-    form_class = ExtendedUserCreationForm
+    form_class = UserCreationForm
     success_url = reverse_lazy('accounts:user_menu')
     template_name = 'registration/register.html'
 
 
-# class Generic$1(auth_views.$1):\n       pass\n\n\n
 class GenericLoginView(auth_views.LoginView):
     pass
 
