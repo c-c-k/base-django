@@ -1,4 +1,6 @@
 # https://docs.djangoproject.com/en/4.1/topics/auth/default/#module-django.contrib.auth.views
+# TODO: override on_success url mappings to account
+#       for Django not looking for them in the 'accounts:' namespace.
 
 from django.contrib.auth import views as auth_views
 from django.shortcuts import redirect, render
