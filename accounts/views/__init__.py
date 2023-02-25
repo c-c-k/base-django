@@ -1,6 +1,6 @@
 from .generic import (
     GenericProfileView as ProfileView,
-    # GenericRegisterView as RegisterView,
+    GenericRegisterView as RegisterView,
     # GenericLoginView as LoginView,
     # GenericLogoutView as LogoutView,
     # GenericPasswordChangeView as PasswordChangeView,
@@ -10,9 +10,9 @@ from .generic import (
     # GenericPasswordResetConfirmView as PasswordResetConfirmView,
     # GenericPasswordResetCompleteView as PasswordResetCompleteView,
 )
-from .custom import (
+# from .custom import (
     # CustomProfileView as ProfileView,
-    CustomRegisterView as RegisterView,
+    # CustomRegisterView as RegisterView,
     # CustomLoginView as LoginView,
     # CustomLogoutView as LogoutView,
     # CustomPasswordChangeView as PasswordChangeView,
@@ -21,4 +21,4 @@ from .custom import (
     # CustomPasswordResetDoneView as PasswordResetDoneView,
     # CustomPasswordResetConfirmView as PasswordResetConfirmView,
     # CustomPasswordResetCompleteView as PasswordResetCompleteView,
-)
+# )
